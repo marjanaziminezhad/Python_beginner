@@ -1,0 +1,25 @@
+#You have this list:
+a = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+
+#Write code thats output all list items smaller than 9.
+list_1 =[]
+for x in a :
+    if x < 9:
+        # After you have written the code, design some test cases to show that it works as expected.
+        print(x)
+        # Instead of printing the items, create a new list and append the items from the old list that match the condition. In the end, print the list.
+        list_1.append(x)
+print(list_1)
+
+
+#Ask the user for input, and output only the list items smaller than the given value.
+list_2 =[]
+y= int(float(input("give me a list that all the items are smaller than:")))
+
+for z in a:
+    if z < y:
+        list_2.append(z)
+print(f'this is your list={list_2}')
+#Save the last version(the one which interacts with the user) as a Python script and execute it from the command line.
+#(base) marjan@marjan-VirtualBox: ~/Documents/Exercise/sheet3$ python Bsp8.py
+

@@ -1,0 +1,94 @@
+
+
+Building a new DB, current time: 11/06/2022 17:44:14
+New DB name:   /home/marjan/Documents/Exercise/sheet4/bsp3/cyano/blastn/db/cyano_data.fasta
+New DB title:  cyano_data.fasta
+Sequence type: Nucleotide
+Keep MBits: T
+Maximum file size: 1000000000B
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xC3] in string at byte 35
+NR_112217_Starria_zimbabweënsis_SAG_74.90_(=UTEX_1754)_:_T,R Starria zimbabweensis strain SAG 74.90 16S ribosomal RNA gene, partial sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xAB] in string at byte 36
+NR_112217_Starria_zimbabweënsis_SAG_74.90_(=UTEX_1754)_:_T,R Starria zimbabweensis strain SAG 74.90 16S ribosomal RNA gene, partial sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xC3] in string at byte 35
+NR_112217_Starria_zimbabweënsis_SAG_74.90_(=UTEX_1754)_:_T,R Starria zimbabweensis strain SAG 74.90 16S ribosomal RNA gene, partial sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xAB] in string at byte 36
+NR_112217_Starria_zimbabweënsis_SAG_74.90_(=UTEX_1754)_:_T,R Starria zimbabweensis strain SAG 74.90 16S ribosomal RNA gene, partial sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 46
+KP640604_Pinocchia_polymorpha_UPOC_62–P/2013_(=strain_E5)_:_T Pinocchia polymorpha E5 clone E5/1 16S ribosomal RNA gene, partial sequence; and 16S-23S ribosomal RNA intergenic spacer, complete sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 47
+KP640604_Pinocchia_polymorpha_UPOC_62–P/2013_(=strain_E5)_:_T Pinocchia polymorpha E5 clone E5/1 16S ribosomal RNA gene, partial sequence; and 16S-23S ribosomal RNA intergenic spacer, complete sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x93] in string at byte 48
+KP640604_Pinocchia_polymorpha_UPOC_62–P/2013_(=strain_E5)_:_T Pinocchia polymorpha E5 clone E5/1 16S ribosomal RNA gene, partial sequence; and 16S-23S ribosomal RNA intergenic spacer, complete sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 46
+KP640604_Pinocchia_polymorpha_UPOC_62–P/2013_(=strain_E5)_:_T Pinocchia polymorpha E5 clone E5/1 16S ribosomal RNA gene, partial sequence; and 16S-23S ribosomal RNA intergenic spacer, complete sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 47
+KP640604_Pinocchia_polymorpha_UPOC_62–P/2013_(=strain_E5)_:_T Pinocchia polymorpha E5 clone E5/1 16S ribosomal RNA gene, partial sequence; and 16S-23S ribosomal RNA intergenic spacer, complete sequence
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x93] in string at byte 48
+KP640604_Pinocchia_polymorpha_UPOC_62–P/2013_(=strain_E5)_:_T Pinocchia polymorpha E5 clone E5/1 16S ribosomal RNA gene, partial sequence; and 16S-23S ribosomal RNA intergenic spacer, complete sequence
+FASTA-Reader: Ignoring invalid residues at position(s): On line 470: 208-212
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 42
+AM711523_Desmonostoc_muscorum_NIVA–CYA_818_(=Lukesova_2/91)_:_T Nostoc muscorum partial 16S rRNA gene, strain Lukesova 1/87
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 43
+AM711523_Desmonostoc_muscorum_NIVA–CYA_818_(=Lukesova_2/91)_:_T Nostoc muscorum partial 16S rRNA gene, strain Lukesova 1/87
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x93] in string at byte 44
+AM711523_Desmonostoc_muscorum_NIVA–CYA_818_(=Lukesova_2/91)_:_T Nostoc muscorum partial 16S rRNA gene, strain Lukesova 1/87
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 42
+AM711523_Desmonostoc_muscorum_NIVA–CYA_818_(=Lukesova_2/91)_:_T Nostoc muscorum partial 16S rRNA gene, strain Lukesova 1/87
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 43
+AM711523_Desmonostoc_muscorum_NIVA–CYA_818_(=Lukesova_2/91)_:_T Nostoc muscorum partial 16S rRNA gene, strain Lukesova 1/87
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x93] in string at byte 44
+AM711523_Desmonostoc_muscorum_NIVA–CYA_818_(=Lukesova_2/91)_:_T Nostoc muscorum partial 16S rRNA gene, strain Lukesova 1/87
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 18
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 19
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x9C] in string at byte 20
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 32
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 33
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x9D] in string at byte 34
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 18
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 19
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x9C] in string at byte 20
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0xE2] in string at byte 32
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x80] in string at byte 33
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Error: (803.7) [makeblastdb] Blast-def-line-set.E.title
+Bad char [0x9D] in string at byte 34
+AJ000709_“Euhalothece”_sp._(Cyanothece)_MPI_95AH10_(=PCC_9711,_PCC_9712)_:_(t),r Euhalothece sp. 16S rRNA gene, strain MPI 95AH10
+Adding sequences from FASTA; added 342 sequences in 0.0373068 seconds.

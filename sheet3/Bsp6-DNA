@@ -1,0 +1,24 @@
+# Code 1
+name = "world"
+repeats = 5
+hello_count = 0
+
+for x in range(repeats):
+    print("x is now %d" % (x))
+    
+    for y in range(repeats + 2):
+        print("  x: %d, y: %d: Hello, %s" % (x, y, name))
+        hello_count += 1
+        
+print()
+print("I said hello %d times using the nested loop" % (hello_count))
+
+count =0
+DNA = "ACGT"
+for x in DNA:
+    for y in DNA:
+        for z in DNA:
+            count += 1
+            print (x + y + z)
+            print (f"{x}{y}{z}")
+print(count)            

@@ -1,0 +1,54 @@
+1. PEP 8 says: "Write docstrings for all public modules, functions, classes, and methods. Docstrings are not necessary for non-public methods, but you should 
+have a comment that describes what the method does". What is this distinction between public and private components?
+
+    Public Docstrings sind dafür da, dass man sie beim Importieren nutzen kann.
+    Private Docstrings sind nicht dafür gedacht, dass man von außen darauf zugreift, sondern sie sind für interne Nutzung. 
+
+2. What does the type of the return value of the function input()?
+    String
+
+3. The docstring gives a detailed explanation of what the function does and how it's supposed to be used. It can help to add usage examples to the docstring, as
+    if you were using the interactive interpreter. (Such examples are called Doctests, because they can also be used for testing.) Add one or two such usage
+    examples to the function docstring.
+
+4. You should make sure that testing using assert works. (Negative controls are important, also in computer science!) For example, the tests 
+    should fail if the returned value has the wrong type. To check this, go back to the parse_input function and temporarily remove the casting to 
+    integer. Does the function still work? Do the assertions still work?
+    Yes, the function works but it doesn't do what it should (returns string). And no the assertion will raise an exception. 
+
+5. Inspect the objects DICE_ART[1] and DICE_ART[1][0] in the interactive window. What type do they have? What information is saved in DIE_HEIGHT and DIE_WIDTH?
+
+    DICE_ART[1] = Tuple
+    DICE_ART[1][0] = String
+    DIE_HEIGHT = holds the number of rows a given face will occupy 
+    DIE_WIDTH = holds the number of columns required to draw a die face
+
+6. Add a doctest to the function generate_dice_faces_ diagram. check
+    Run the doctests from the command line: $ python -m doctest -v dice.py. How many tests were executed?
+        4 Tests in 4 items have been executed. All of them passed.
+
+7. As a negative control, temporarily modify one doctest (e.g. change input arguments without changing the expected output or the other way round) to make sure that the test
+    really fails in this case. Yes, it failed.
+
+8. Why does the example above use the code print(generate_dice_faces_diagram([4, 1, 3, 2])) for the doctest, rather than generate_dice_faces_diagram([4, 1, 3, 2])?
+    Without the print you would have to write the dice face diagramm as one line with all the \n. With the print function you can avoid this step.
+
+9. What are some assertions that you could add to the function generate_dice_faces_diagram as checkpoints, to verify your assumptions about the program state?
+assert len(dice_faces_rows) == DIE_HEIGHT
+
+10. Add type hints to the function definition. check
+
+11. Write test cases for the complete function generate_dice_faces_diagram using assert. Add them to the _test function. check
+
+12. Are there other functions that you wrote so far were also pure functions?
+ 
+13. Add type hints to the function definitions. Does the Pylance type checker complain, if you get the contents of the returned list wrong, e.g. list[int]
+    instead of list[str]? Why not?
+
+    The type hints are ignored by the compiler. It is just an inormation for the user.
+
+14. Are the functions _get_dice_faces and _generate_dice_faces_rows pure functions?
+
+    No, they are not. They use all global variable.  The parse_user_input function is the only pure one.
+
+15. Extract the creation of the output header into a separate helper function. Run the tests (also doctests) to make sure that everything works as expected.

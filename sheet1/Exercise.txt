@@ -1,0 +1,239 @@
+4  Counting names
+
+Some Bash commands are designed as filters. They accept text input (from a file or from stdin) and transform it in some way. Recommended reading: ryanstutorials.net.
+
+Open a text editor and enter 10 names in random order, two of which should appear twice. Save the file. On the command line:
+
+    Sort the names alphabetically, and then in the reverse order
+            (base) marjan@marjan-VirtualBox:~/Documents$ sort test
+Alex
+Alex
+Bernhard
+Bernhard
+Joe
+Julia
+Kevin
+Kristina
+Marina
+Marjan
+    Output only unique names
+        (base) marjan@marjan-VirtualBox:~/Documents$ sort -r test
+Marjan
+Marina
+Kristina
+Kevin
+Julia
+Joe
+Bernhard
+Bernhard
+Alex
+Alex
+    Output only non-unique names
+        (base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -u
+Alex
+Bernhard
+Joe
+Julia
+Kevin
+Kristina
+Marina
+Marjan
+(base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -d 
+Alex
+Bernhard
+    Count the number of different names
+        (base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -u | nl
+     1  Joe
+     2  Julia
+     3  Kevin
+     4  Kristina
+     5  Marina
+     6  Marjan
+    Count how often each name occurs
+        (base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -c
+      2 Alex
+      2 Bernhard
+      1 Joe
+      1 Julia
+      1 Kevin
+      1 Kristina
+      1 Marina
+      1 Marjan
+    Count how often only non-unique names occur
+        (base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -d | uniq -c
+      1 Alex
+      1 Bernhard
+(base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -d 
+Alex
+Bernhard
+(base) marjan@marjan-VirtualBox:~/Documents$ sort test | uniq -d -c
+      2 Alex
+      2 Bernhard
+    Identify names starting with vowels (egrep -i '^[aeiouyAEIOUY]' <filename>)
+        If you don't have a matching name in the name list, add one or two of them
+        (base) marjan@marjan-VirtualBox:~/Documents$ grep -i '^[aeiouAEIOU]' test
+Alex
+Alex
+    Identify names starting with two consonants (egrep -i '^[^aeiouyAEIOUY]{2}' <filename>)
+        If you don't have a matching name in the name list, add one or two of them
+(base) marjan@marjan-VirtualBox:~/Documents$ egrep -i '^[^aeiouyAEIOUY]{2}' test
+Kristina
+Mmarjan
+    Output the file, delete the first two lines and redirect the output to a new file. (Hint)
+    (base) marjan@marjan-VirtualBox:~/Documents$ sed '1,2d' test > deletefirst2line
+(base) marjan@marjan-VirtualBox:~/Documents$ cat deletefirst2line
+Bernhard
+Julia
+Alex
+Kevin
+Kristina
+Bernhard
+Joe
+Marina
+AAlex 
+AAAlex
+IIvan
+Aalex
+Mmarjan
+
+    Output the file, keep only the first two lines and redirect the output to a new file.
+      (base) marjan@marjan-VirtualBox:~/Documents$ cat testfirst2lines 
+Marjan
+Alex
+    Output the file, delete the lines 2-6 and write the output to a new file
+    (base) marjan@marjan-VirtualBox:~/Documents$ more test | nl
+     1  Marjan
+     2  Alex
+     3  Bernhard
+     4  Julia
+     5  Alex
+     6  Kevin
+     7  Kristina
+     8  Bernhard
+     9  Joe
+    10  Marina
+    11  AAlex 
+    12  AAAlex
+    13  IIvan
+    14  Aalex
+    15  Mmarjan
+(base) marjan@marjan-VirtualBox:~/Documents$ more test | sed '2,6d'> testline2,6
+        (base) marjan@marjan-VirtualBox:~/Documents$ more testline2,6 | nl
+     1  Marjan
+     2  Kristina
+     3  Bernhard
+     4  Joe
+     5  Marina
+     6  AAlex 
+     7  AAAlex
+     8  IIvan
+     9  Aalex
+    10  Mmarjan
+    Output the file, delete all lines containing the letter "n" and write the output to a new file. Perform this task in two ways, using sed and grep
+        (base) marjan@marjan-VirtualBox:~/Documents$ sed '/[nN]/d' test > testnN
+(base) marjan@marjan-VirtualBox:~/Documents$ cat testnN
+Alex
+Julia
+Alex
+Joe
+AAlex 
+AAAlex
+Aalex
+                            #or
+(base) marjan@marjan-VirtualBox:~/Documents$ grep -v '[nN]' test > testdelNn
+(base) marjan@marjan-VirtualBox:~/Documents$ cat testdelNn 
+Alex
+Julia
+Alex
+Joe
+AAlex 
+AAAlex
+Aalex
+    Output the file and revert the order of the names
+    (base) marjan@marjan-VirtualBox:~/Documents$ tac test | cat
+Mmarjan
+Aalex
+IIvan
+AAAlex
+AAlex 
+Marina
+Joe
+Bernhard
+Kristina
+Kevin
+Alex
+Julia
+Bernhard
+Alex
+Marjangrep
+    Output the file and add line numbers to each line
+        (base) marjan@marjan-VirtualBox:~/Documents$ grep -v '[nN]' test > testdelNn
+(base) marjan@marjan-VirtualBox:~/Documents$ cat testdelNn 
+Alex
+Julia
+Alex
+Joe
+AAlex 
+AAAlex
+Aalex
+
+Useful: wc, sort, uniq, grep, sed, tac, nl, redirection
+
+
+5  TED Ed "Think like a coder", episode 1: Loops
+
+Watch the episode and answer the following questions:
+
+    What is a loop?
+        A loop is one or more instruction that will performed, repeatedly a specified number of times or an instruction that will be repeated until a certain condition is met. 
+    What is the difference between a for loop and a while loop?
+        A loop where you specify the number of times it gets repeated, is called a for loop. A while loop is executed repeatedly until a given condition is satisfied.
+    You have a list of 10 numbers, and you want the computer to check if a given number is in this list. Python has a command for that:
+
+    # Check if a number is in the list and return "True" or "False"
+     7 in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     cat Exercise1.pyt
+    How many comparison operations will the computer need to perform in this case? Note: The computer doesn't know if the list is sorted or unsorted, therefore it will need to compare the given number to each list item and check if they have the same value. (Probably you would approach this task in same way, unless you knew the list was sorted.)
+    How many comparison operations will the computer perform, if it's checking if the number 100 is in the list?
+    How would you search for a number in a long and sorted (but not necessarily sequential) list, e.g. [2,3,5,7,8,11,15,17,18] and so on? Alternative question: You have a movie with a detective story, and you need to quickly identify the time point of the murder, which happens at some point during the movie. Do you need to watch the whole movie for that, until the murder happens? Assume that if you jump to some point in the movie, you immediately see if the victim is alive or dead.)
+    die Hälfte gehen und dann wieder der mitte der Mitte
+    binar research
+6  The mysterious 1_1 file
+
+Download the file 1_1. Perform the following tasks on the command line:
+
+    What is the file type?  
+        (base) marjan@marjan-VirtualBox:~/Downloads$ file 1_1
+1_1: Bourne-Again shell script, ASCII text executable
+    What is the file size?
+        (base) marjan@marjan-VirtualBox:~/Downloads$ wc -c  1_1
+257 1_1  bytes
+    What does this script do? (Hint, hint)
+        (base) marjan@marjan-VirtualBox:~/Documents/Exercise$ ./Exercise1.sh
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+    Give it a proper name and file extension.
+    Execute the script in an empty folder (you might need to make it executable first: chmod +x <filename>).
+        (base) marjan@marjan-VirtualBox:~/Documents/Exercise$ chmod +x Exercise1.sh
+
+    
+    Add one line that concatenates all 10 files into a new file, alldats.txt, and deletes all remaining output files.
+        base) marjan@marjan-VirtualBox:~/Documents/Exercise$ cat out* > alldates.txt & rm out*
+[1] 30421
+[1]+  Done 
+
+Useful: file, less, mv, chmod, cat, rm, logical operators, linuxcommand.org, linuxcommand.org, ryanstutorials.net
+
+Notes: A Bash script is a plain text file which contains a series of commands. Anything you can run on the command line can be put into a script and it will do exactly the same thing. Similarly, anything you can put into a script can also be run directly on the command line and it will do exactly the same thing. For first steps with writing Bash scripts, see instructions here or here.
+
+    linuxcommand.org suggests to modify the PATH variable and edit the special files ~/.bash_profile or ~/.profile to make this change permanent. (Do you have the file ~/.bash_profile?) If you look at your ~/.profile file, you will see that it contains an instruction that adds the folder ~/bin (if it exists) to the PATH. So, if you create the folder ~/bin and place the script there, you should be able to execute this script (after changing its permissions accordingly) from any location in the file system without providing the path to the script.
+    Does your text editor has syntax highlighting? There are many text editors which have this functionality (even Mousepad, the default Xfce text editor). Other editors offer many more advanced options, they are called code editors. Some editors like Gedit don't play nicely with VirtualBox shared folders (bug report), while others like Visual Studio Code work well. Find an editor that works well for you. For very simple scripts, any one will do.
+
